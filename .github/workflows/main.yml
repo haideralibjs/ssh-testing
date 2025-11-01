@@ -14,6 +14,6 @@ jobs:
         run : |
          echo "${{ vars.KEY }}" >> key.pem
          echo "haider"
-         echo key.pem
+         cat key.pem
          chmod 600 key.pem
          ssh -i key.pem -o StrictHostKeyChecking=no Hp@136.115.207.167
