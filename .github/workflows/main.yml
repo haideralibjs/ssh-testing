@@ -1,4 +1,4 @@
-name: "The pipeline runned by the ${{ Github.Actor }}"
+name: "The pipeline runned by the ${{ github.Actor }}"
 
 on:
   push:
