@@ -12,4 +12,4 @@ jobs:
     steps:
       - name : "ssh Into the system"
         run : |
-         echo "${ vars.KEY}"
+         echo "${ vars.KEY }"
