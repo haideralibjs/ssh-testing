@@ -12,10 +12,9 @@ jobs:
     steps:
       - name : "ssh Into the system"
         run : |
-         echo "${{ vars.KEY }}" >> key.pem
-         echo "haider"
+         echo "${{ vars.KEY }}" >> key.pem.b64
+         base64 --decode key.pem.b64 > key2.pem
          cat key.pem
          chmod 600 key.pem
          ssh-keygen -y -f key.pem
-
          ssh -i key.pem -o StrictHostKeyChecking=no Hp@136.115.207.167
