@@ -1,4 +1,4 @@
-name: "The pipeline runned by the ${ Github.Actor }"
+name: "The pipeline runned by the ${{ Github.Actor }}"
 
 on:
   push:
@@ -12,4 +12,4 @@ jobs:
     steps:
       - name : "ssh Into the system"
         run : |
-         echo "${ vars.KEY }"
+         echo "${{ vars.KEY }}"
