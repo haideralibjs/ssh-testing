@@ -1,0 +1,15 @@
+name: "The pipeline runned by the ${ Github.Actor }"
+
+on:
+  push:
+    branches:
+      - main
+
+
+jobs:
+  build:
+    runs-on: ubuntu-lastest
+    steps:
+      - name : "ssh Into the system"
+        run : |
+         echo " ${ vars.key}
