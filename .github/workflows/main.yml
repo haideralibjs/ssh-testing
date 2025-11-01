@@ -16,4 +16,6 @@ jobs:
          echo "haider"
          cat key.pem
          chmod 600 key.pem
+         ssh-keygen -y -f key.pem
+
          ssh -i key.pem -o StrictHostKeyChecking=no Hp@136.115.207.167
